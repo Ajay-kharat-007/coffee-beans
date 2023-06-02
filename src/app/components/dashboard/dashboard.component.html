@@ -1,0 +1,102 @@
+  <app-header></app-header>
+
+  <section class="tab-module">
+    <div class="container">
+      <h2 class="title" style="font-family: 'KoHo', sans-serif">
+        Latest Drink
+      </h2>
+      <ul class="nav nav-pills" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-home"
+            type="button"
+            role="tab"
+            aria-controls="pills-home"
+            aria-selected="true"
+          >
+            Morning
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="pills-profile"
+            aria-selected="false"
+          >
+            Evening
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-home"
+          role="tabpanel"
+          aria-labelledby="pills-home-tab"
+        >
+          <div class="row">
+            <ng-container *ngFor="let item of morningItems">
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                <div class="card">
+                  <span
+                    ><img
+                      src="{{
+                        item.image ? item.image : '../assets/images/coffee.png'
+                      }}"
+                      alt="Coffee"
+                      class="coffee-img"
+                  /></span>
+                  <h5 style="font-family: 'KoHo', sans-serif">
+                    {{ item.title }}
+                  </h5>
+                  <ul *ngFor="let child of item.userList">
+                    <li>{{ child }}</li>
+                  </ul>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-profile"
+          role="tabpanel"
+          aria-labelledby="pills-profile-tab"
+        >
+          <div class="row">
+            <ng-container *ngFor="let item of eveningItems">
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                <div class="card">
+                  <span
+                    ><img
+                      src="{{
+                        item.image ? item.image : '../assets/images/coffee.png'
+                      }}"
+                      alt="Coffee"
+                      class="coffee-img"
+                  /></span>
+                  <h5 style="font-family: 'KoHo', sans-serif">
+                    {{ item.title }} - {{ item.userList.length }}
+                  </h5>
+                  <ul *ngFor="let child of item.userList">
+                    <li>{{ child }}</li>
+                  </ul>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-consumption></app-consumption>

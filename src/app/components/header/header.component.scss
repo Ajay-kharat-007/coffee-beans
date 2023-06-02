@@ -1,0 +1,46 @@
+header {
+  width: 100vw;
+  padding: 20px;
+  height: 6vh;
+  background: #FFFFFF;
+  border-bottom: 2px solid black;
+  margin-bottom: 20px;
+
+  .logo {
+
+    position: absolute;
+    width: 254px;
+    height: 26px;
+    left: 160px;
+    top: 34px;
+
+    font-family: 'KoHo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 26px;
+    /* identical to box height, or 81% */
+
+
+    color: #000000;
+  }
+
+  .admin {
+
+    position: absolute;
+    width: 93px;
+    height: 26px;
+    left: 1146px;
+    top: 34px;
+
+    font-family: 'KoHo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 26px;
+    /* identical to box height, or 81% */
+
+
+    color: #000000;
+  }
+}

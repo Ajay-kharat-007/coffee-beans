@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "coffeebeans-687b6": {
+      "hosting": {
+        "coffee-beans": [
+          "coffeebeans-687b6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "coffeebeans-687b6"
+  }
+}

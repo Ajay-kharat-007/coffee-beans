@@ -1,0 +1,85 @@
+<section class="consumption-module">
+  <div class="container">
+    <h2 class="title">Consumption of Drink</h2>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          (click)="loadChartDateWise('day')"
+          class="nav-link active"
+          id="home-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#home"
+          type="button"
+          role="tab"
+          aria-controls="home"
+          aria-selected="true"
+        >
+          Per Day
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          (click)="loadChartDateWise('week')"
+          class="nav-link"
+          id="profile-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#profile"
+          type="button"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          One Week
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          (click)="loadChartDateWise('month')"
+          class="nav-link"
+          id="contact-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#contact"
+          type="button"
+          role="tab"
+          aria-controls="contact"
+          aria-selected="false"
+        >
+          One Month
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          (click)="loadChartDateWise('custom')"
+          class="nav-link"
+          id="custom-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#custom"
+          type="button"
+          role="tab"
+          aria-controls="custom"
+          aria-selected="false"
+        >
+          Custom Report
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content-container">
+      <div class="tab-panel">
+        <div class="chart">
+          <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [dataLabels]="chartOptions.dataLabels"
+            [plotOptions]="chartOptions.plotOptions"
+            [yaxis]="chartOptions.yaxis"
+            [xaxis]="chartOptions.xaxis"
+            [legend]="chartOptions.legend"
+            [colors]="chartOptions.colors"
+            [grid]="chartOptions.grid"
+          ></apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

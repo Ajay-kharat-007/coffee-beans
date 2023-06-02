@@ -1,0 +1,84 @@
+<div class="form-container">
+  <div class="container">
+    <div class="row text-center mb-4">
+      <div class="col-lg-12 col-md-12">
+        <a href="#">
+          <img
+            src="../../../assets/images/ANTlogo.png"
+            alt=""
+            class="ant-logo"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="row align-items-center justify-content-center">
+      <div class="form col-md-8 col-lg-6 col-xl-5 col-sm-12">
+        <div class="form-card">
+          <div class="card-body p-4">
+            <form method="post" [formGroup]="loginForm" (ngSubmit)="submitForm()" autocomplete="off">
+              <div class="p-2 mt-4">
+                <div class="mb-3">
+                  <label class="form-label" for="EmployeeId">Username</label>
+
+                  <input
+                    placeholder="Enter Username"
+                    autofocus="autofocus"
+                    class="form-control text-box single-line"
+                    formControlName="email"
+                    data-val="true"
+                    data-val-required="Employee Code Is Required"
+                    id="txtEmployeeId"
+                    name="EmployeeId"
+                    tabindex="1"
+                    type="text"
+                    value=""
+                  />
+                  <span
+                    class="field-validation-valid text-danger"
+                    data-valmsg-for="EmployeeId"
+                    data-valmsg-replace="true"
+                  ></span>
+                </div>
+                <div class="mb-3">
+                  <div class="float-end">
+                    <a href="#" class="text-primary">Forgot password?</a>
+                  </div>
+                  <label class="form-label" for="userpassword">Password</label>
+
+                  <input
+                    placeholder="Enter Password"
+                    class="form-control text-box single-line password"
+                    data-val="true"
+                    formControlName="password"
+                    data-val-required="Password Is Required"
+                    id="Password"
+                    name="Password"
+                    tabindex="2"
+                    type="password"
+                  />
+                  <span
+                    class="field-validation-valid text-danger"
+                    data-valmsg-for="Password"
+                    data-valmsg-replace="true"
+                  ></span>
+                </div>
+                <div class="mt-3 text-center">
+                  <input
+                  [disabled]="loginForm.invalid"
+                    type="submit"
+                    value="Login"
+                    class="btn btn-primary w-sm waves-effect waves-light"
+                    tabindex="3"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="mt-5 text-center">
+          <p>©2023 ACTIVE NEURONS TECHNOLOGY.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

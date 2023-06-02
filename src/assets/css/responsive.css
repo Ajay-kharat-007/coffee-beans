@@ -1,0 +1,14 @@
+
+@media(min-width:1441px){
+      .container{
+        max-width: 1440px;
+        padding: 0px 140px;
+    }
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+    left: 25px;
+  }
+}
